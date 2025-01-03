@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Playwright test results and reports
+test-results/
+playwright-report/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Mac OS files
+.DS_Store
