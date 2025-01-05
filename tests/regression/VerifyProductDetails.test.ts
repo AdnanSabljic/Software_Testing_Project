@@ -1,12 +1,18 @@
 import { test, expect } from '@playwright/test';
+import { LoginPage } from '../../page-objects/LoginPage';
 
 test('Functional Test: Verify product details page', async ({ page }) => {
-    await page.goto('https://www.saucedemo.com/');
-    await page.click('text=Sauce Labs Backpack');
+    // Login first
+    const loginPage = new LoginPage(page);
+    await loginPage.navigateTo('https://www.saucedemo.com/');
+    await loginPage.login('standard_user', 'secret_sauce');
 
-    const productTitle = await page.textContent('.inventory_details_name');
-    const productPrice = await page.textContent('.inventory_details_price');
+    // Navigate to product details
+    await page.click('.inventory_item_name');
 
-    expect(productTitle).toBe('Sauce Labs Backpack');
-    expect(productPrice).toBe('$29.99');
+    const productTitle = await page.locator('.inventory_details_name');
+    const productPrice = await page.locator('.inventory_details_price');
+
+    await expect(productTitle).toHaveText('Sauce Labs Backpack');
+    await expect(productPrice).toHaveText('$29.99');
 });
