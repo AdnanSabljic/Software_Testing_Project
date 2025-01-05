@@ -11,3 +11,6 @@ Before you begin, ensure you have the following installed on your machine:
 
 ## Installation
 
+npx playwright test
+
+
