@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../page-objects/LoginPage';
+
 test('Functional Test: Filter products by price (low to high)', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
     const loginPage = new LoginPage(page);
