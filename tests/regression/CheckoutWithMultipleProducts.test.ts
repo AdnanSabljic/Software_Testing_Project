@@ -31,7 +31,7 @@ test('Functional Test: Complete purchase with multiple items and verify total', 
 
     // Complete checkout
     const checkoutPage = new CheckoutPage(page);
-    await checkoutPage.fillCheckoutDetails('John', 'Doe', '12345');
+    await checkoutPage.fillCheckoutDetails('Adnan', 'Sabljic', '71000');
 
     // Verify the total on the checkout page
     const checkoutTotal = await page.locator('.summary_subtotal_label').textContent();
