@@ -43,6 +43,7 @@ npx playwright test --config=smoke.config.ts
 To run only the regression tests, use:
 ```bash
 npx playwright test --config=regression.config.ts
+
 ```
 
 ## Run a specific test
@@ -51,7 +52,19 @@ To run a specific test file, specify the file path:
 npx playwright test [Name of the file that you want to test].test.ts
 ```
 
-## Run test in headed mode 
+## Run smoke tests in headed mode
+
+```bash
+npx playwright test --grep "Smoke" --headed
+```
+
+## Run regression tests in headed mode
+
+```bash
+npx playwright test --grep "Regression" --headed
+```
+
+
 
 
 
