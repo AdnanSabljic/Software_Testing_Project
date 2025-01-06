@@ -36,13 +36,13 @@ npx playwright test
 ## Running only smoke tests
 To run only the smoke tests, use:
 ```bash
-npx playwright test --config=smoke.config.ts
+npx playwright test --grep "Smoke" --headed
 ```
 
 ## Running only regression tests
 To run only the regression tests, use:
 ```bash
-npx playwright test --config=regression.config.ts
+npx playwright test --grep "Regression" --headed
 ```
 
 ## Run a specific test
