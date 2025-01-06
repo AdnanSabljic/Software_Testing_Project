@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
-
+import { LoginPage } from '../../page-objects/LoginPage';
 test('Functional Test: Filter products by price (low to high)', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
+    const loginPage = new LoginPage(page);
+    await loginPage.navigateTo('https://www.saucedemo.com/');
+    await loginPage.login('standard_user', 'secret_sauce');
 
     // Step 1: Sort products by price (low to high)
     await page.selectOption('.product_sort_container', 'lohi');
