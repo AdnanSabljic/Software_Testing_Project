@@ -51,6 +51,11 @@ To run a specific test file, specify the file path:
 ```bash
 npx playwright test [Name of the file that you want to test].test.ts
 ```
+## Run all tests in headed mode 
+```bash
+npx playwright test --headed
+```
+
 
 ## Run smoke tests in headed mode
 
