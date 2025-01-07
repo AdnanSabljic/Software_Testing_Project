@@ -21,7 +21,7 @@ test('Smoke Test: Complete checkout process', async ({ page }) => {
     
     // Complete checkout
     const checkoutPage = new CheckoutPage(page);
-    await checkoutPage.fillCheckoutDetails('John', 'Doe', '12345');
+    await checkoutPage.fillCheckoutDetails('Ferzudin', 'Zulic', '71000');
     await checkoutPage.completeCheckout();
     
     // Verify order completion
