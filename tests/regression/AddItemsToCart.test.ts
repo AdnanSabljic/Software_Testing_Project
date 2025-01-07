@@ -8,7 +8,6 @@ test('Functional Test: Add the same product multiple times', async ({ page }) =>
     await loginPage.navigateTo('https://www.saucedemo.com/');
     await loginPage.login('standard_user', 'secret_sauce');
     
-    // Add product twice
     await page.click('#add-to-cart-sauce-labs-backpack');
     await expect(page.locator('.shopping_cart_badge')).toHaveText('1');
     
